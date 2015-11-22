@@ -27,43 +27,44 @@ bricks = [ " ", "[]", "[__]", "[____]", "[______]" ]
 
 
 def row1(brick4, mortar): 
-    mortar = bricks[0]  #sample code, you should replace it
+    mortar = bricks[1]  #sample code, you should replace it
     brick4 = bricks[4]  #sample code, you can replace it
-    row1 = (mortar + brick4 + mortar) * 3 #sample code, you can replace it
+    row1 = (mortar + brick4 + mortar) * 2 #sample code, you can replace it
     brick2 = bricks[2]
     return row1
     
 def row2(mortar, brick2):
-    mortar = bricks[0] #sample code, you can replace b/c rows don't align right
+    mortar = bricks[1] #sample code, you can replace b/c rows don't align right
     brick2 = bricks[2]
-    row2 = (brick2 + mortar ) * 6
+    row2 = (brick2 + mortar ) * 4
     return row2
 
-def row3():
-    #do something
+def row3(brick4,brick3,brick2,brick1):
+    row3=brick2+brick3+brick4+brick2+brick1
     return row3
     
 
-def row4():
-    #do something
-    return row3
+def row4(brick4,brick):
+    row4=brick4*3
+    return row4
 
-def row5():
-     #do something
-    return row3
+def row5(brick1,brick3):
+    mortar=bricks[0]
+    row5=(brick3+brick1)*3
+    return row5
 
 
 
 def small_wall():
-    print row1(bricks[3], bricks[0])
+    print row1(bricks[3], bricks[1])
     time.sleep(1)
     print row2(bricks[0], bricks[2])
     time.sleep(1)
-    #call row function with relevant argument(s)
+    print row3(bricks[4],bricks[3],bricks[2],bricks[1])
     time.sleep(1)
-    #call row function with relevant argument(s)
+    print row4(bricks[4],bricks[0])
     time.sleep(1)
-    #call row function with relevant argument(s)
+    print row5(bricks[3],bricks[1])
 
     
 small_wall()
