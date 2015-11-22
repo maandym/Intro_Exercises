@@ -34,4 +34,5 @@ def isOdd(integer):
 isOdd(2)
 isOdd(integer)
 isOdd(4)
+isOdd(123)
 isOdd(5)
